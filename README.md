@@ -1,2 +1,2 @@
 # Software-Engineering-and-Computing-II
-SECII, 2022 FALL
+SECII, 2022 Spring
