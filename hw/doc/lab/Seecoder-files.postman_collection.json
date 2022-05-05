@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "7003012d-8d9a-41da-96ea-25e09f84d1cd",
+		"name": "Seecoder-files",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "uploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/file",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file"
+					]
+				},
+				"description": "uploadFile接口，用于上传图片到Seecoder图床。\n\n使用方法：\n\n1.  设置请求方法为POST；\n2.  设置Body下的form-data：设置\"Key\"为 file ，选择右侧类型为\"File\"，点击\\`Select Files\\`，选择本地的图片；\n3.  点击Send，查看返回信息。"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteFile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/file?fileName=",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": ""
+						}
+					]
+				},
+				"description": "deleteFile接口，用于删除已经上传的文件。\n\n1.  设置请求方法为DELETE；\n2.  设置Params，设置fileName为待删除图片的名称(注意**必须带上后缀**，如.png)；\n3.  点击Send，查看结果。\n    \n\n注：如果文件名不是已经上传的文件的，则会报错。所以注意输入正确的图片名称，且不要去尝试删除别人的图片文件！"
+			},
+			"response": []
+		}
+	]
+}
